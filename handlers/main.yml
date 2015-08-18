@@ -3,6 +3,7 @@
 - name: restart supervisord
   sudo: yes
   service: name=supervisor state=restarted
+  ignore_errors: yes
   when: supervisord_service_enabled
 
 - name: reread supervisord
